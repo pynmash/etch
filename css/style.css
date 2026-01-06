@@ -251,7 +251,7 @@ textarea {
 }
 
 #container {
-  /*border: 2px solid black;*/
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -265,7 +265,7 @@ textarea {
 }
 
 .square {
-  border: 1px solid #808080;
+  /*border: 1px solid #808080;*/
 }
 
 .red {
