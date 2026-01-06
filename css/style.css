@@ -268,3 +268,12 @@ textarea {
   /*border: 1px solid black;*/
 }
 
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}

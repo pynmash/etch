@@ -1,5 +1,4 @@
 const container = document.querySelector('#container');
-const pixelColor = 'red'
 const pointsOnAxis = 16;
 
 for (let i = 0; i < pointsOnAxis; i++) {
@@ -15,6 +14,7 @@ for (let i = 0; i < pointsOnAxis; i++) {
 
 container.addEventListener('mouseover', (e) => {
     if (e.target.classList.contains('square')) {
-        e.target.style.backgroundColor = pixelColor;
+        // e.target.style.backgroundColor = pixelColor;
+        e.target.classList.add('blue');
     }
 })
