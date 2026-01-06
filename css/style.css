@@ -251,11 +251,13 @@ textarea {
 }
 
 #container {
-  border: 2px solid black;
+  /*border: 2px solid black;*/
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5px;
+  height: 800px;
+  width: 800px;
 }
 
 .row {
@@ -263,9 +265,7 @@ textarea {
 }
 
 .square {
-  height: 1rem;
-  width: 1rem;
-  /*border: 1px solid black;*/
+  border: 1px solid #808080;
 }
 
 .red {
