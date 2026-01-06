@@ -1,5 +1,7 @@
 const container = document.querySelector('#container');
-const pointsOnAxis = 100;
+const input = document.querySelector('#size-input');
+const setSizeBtn = document.querySelector('#size');
+const pointsOnAxis = 16;
 
 function createContainer(points) {
     const size = 800 / points;
@@ -17,6 +19,13 @@ function createContainer(points) {
     }
 }
 
+function destroyContainer() {
+    const rows = container.querySelectorAll('.row');
+    for (row of rows) {
+        row.remove();
+    }
+}
+
 createContainer(pointsOnAxis);
 
 container.addEventListener('mouseover', (e) => {
@@ -24,4 +33,9 @@ container.addEventListener('mouseover', (e) => {
         // e.target.style.backgroundColor = pixelColor;
         e.target.classList.add('blue');
     }
+})
+
+setSizeBtn.addEventListener('click', () => {
+    destroyContainer();
+    createContainer(input.value)
 })
