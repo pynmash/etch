@@ -245,6 +245,11 @@ textarea {
   }
 }
 
+#content {
+  display: flex;
+  justify-content: center;
+}
+
 #container {
   border: 2px solid black;
   display: flex;
