@@ -265,8 +265,14 @@ textarea {
 }
 
 .square {
-  /*border: 1px solid #808080;*/
+  box-sizing: border-box;
 }
+
+.square.border {
+  border: solid 1px black;
+}
+
+
 
 .red {
   background-color: red;
@@ -282,4 +288,8 @@ textarea {
   margin-top: 20px;
   display: flex;
   justify-content: center;
+}
+
+#buttons div {
+  margin: 30px;
 }

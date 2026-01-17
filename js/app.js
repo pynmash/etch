@@ -1,9 +1,11 @@
 const container = document.querySelector('#container');
-const input = document.querySelector('#size-input');
+const sizeInput = document.querySelector('#size-input');
 const setSizeBtn = document.querySelector('#size');
+const gridlinesToggle = document.querySelector('#gridlines');
 const pointsOnAxis = 16;
 
 function createContainer(points) {
+    gridlinesToggle.checked = false;
     const size = 800 / points;
     for (let i = 0; i < points; i++) {
         const row = document.createElement('div')
@@ -31,11 +33,20 @@ createContainer(pointsOnAxis);
 container.addEventListener('mouseover', (e) => {
     if (e.target.classList.contains('square')) {
         // e.target.style.backgroundColor = pixelColor;
-        e.target.classList.add('blue');
+        e.target.classList.add('green');
     }
 })
 
 setSizeBtn.addEventListener('click', () => {
     destroyContainer();
-    createContainer(input.value)
+    createContainer(sizeInput.value)
+})
+
+console.log(gridlinesToggle)
+
+gridlinesToggle.addEventListener('change', () => {
+    const squares = document.querySelectorAll('.square');
+    for (square of squares) {
+        square.classList.toggle('border');
+    }
 })
