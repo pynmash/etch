@@ -2,7 +2,10 @@ const container = document.querySelector('#container');
 const sizeInput = document.querySelector('#size-input');
 const setSizeBtn = document.querySelector('#size');
 const gridlinesToggle = document.querySelector('#gridlines');
+const colorButtons = document.querySelector('.colors')
 const pointsOnAxis = 16;
+
+let penColor = 'blue'
 
 function createContainer(points) {
     gridlinesToggle.checked = false;
@@ -32,8 +35,7 @@ createContainer(pointsOnAxis);
 
 container.addEventListener('mouseover', (e) => {
     if (e.target.classList.contains('square')) {
-        // e.target.style.backgroundColor = pixelColor;
-        e.target.classList.add('green');
+        e.target.classList.add(penColor);
     }
 })
 
@@ -42,7 +44,10 @@ setSizeBtn.addEventListener('click', () => {
     createContainer(sizeInput.value)
 })
 
-console.log(gridlinesToggle)
+colorButtons.addEventListener('click', (e) => {
+    penColor = e.target.id
+})
+
 
 gridlinesToggle.addEventListener('change', () => {
     const squares = document.querySelectorAll('.square');
