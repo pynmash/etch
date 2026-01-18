@@ -1,3 +1,4 @@
+const screenWidth = document.documentElement.clientWidth / 3;
 const container = document.querySelector('#container');
 const sizeInput = document.querySelector('#size-input');
 const setSizeBtn = document.querySelector('#size');
@@ -10,7 +11,7 @@ let penUp = false;
 
 function createContainer(points) {
     gridlinesToggle.checked = false;
-    const size = 800 / points;
+    const size = screenWidth / points;
     for (let i = 0; i < points; i++) {
         const row = document.createElement('div')
         row.classList.add('row');

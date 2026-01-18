@@ -264,8 +264,8 @@ textarea {
   flex-direction: column;
   align-items: center;
   padding: 5px;
-  height: 800px;
-  width: 800px;
+  /* height: 800px; */
+  /* width: 800px; */
 }
 
 .row {
