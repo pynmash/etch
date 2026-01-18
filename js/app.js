@@ -2,10 +2,11 @@ const container = document.querySelector('#container');
 const sizeInput = document.querySelector('#size-input');
 const setSizeBtn = document.querySelector('#size');
 const gridlinesToggle = document.querySelector('#gridlines');
-const colorButtons = document.querySelector('.colors')
+const colorButtons = document.querySelector('.colors');
 const pointsOnAxis = 16;
 
-let penColor = 'blue'
+let penColor = 'blue';
+let penUp = false;
 
 function createContainer(points) {
     gridlinesToggle.checked = false;
@@ -34,7 +35,7 @@ function destroyContainer() {
 createContainer(pointsOnAxis);
 
 container.addEventListener('mouseover', (e) => {
-    if (e.target.classList.contains('square')) {
+    if (e.target.classList.contains('square') && penUp === false) {
         e.target.classList.add(penColor);
     }
 })
@@ -53,5 +54,21 @@ gridlinesToggle.addEventListener('change', () => {
     const squares = document.querySelectorAll('.square');
     for (square of squares) {
         square.classList.toggle('border');
+    }
+})
+
+document.addEventListener('keydown', (e) => {
+    const keyName = e.key;
+
+    if (keyName === 'Control') {
+        penUp = true;
+    }
+})
+
+document.addEventListener('keyup', (e) => {
+    const keyName = e.key;
+
+    if (keyName === 'Control') {
+        penUp = false;
     }
 })
