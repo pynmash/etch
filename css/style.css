@@ -245,6 +245,14 @@ textarea {
   }
 }
 
+.cookie-regular {
+  font-family: "Cookie", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+
+
 #content {
   display: flex;
   justify-content: center;
