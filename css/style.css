@@ -288,11 +288,16 @@ textarea {
 }
 
 #buttons {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 }
 
 #buttons div {
-  margin: 30px;
+  margin: 10px;
+}
+
+#instructions {
+  display: flex;
+  justify-content: center;
 }
