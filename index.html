@@ -1,47 +1,55 @@
 <!doctype html>
 <html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+      rel="stylesheet"
+    />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
-        <title></title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <div id="header">
+      <h1 class="cookie-regular">Etch-A-Sketch</h1>
+      <a href="https://www.github.com/pynmash">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+          alt="github logo"
+        />
+      </a>
+    </div>
+    <hr />
 
-<body>
+    <div id="content">
+      <div id="container"></div>
+    </div>
+    <div id="instructions">
+      <p>Press CTRL to lift the pen off the canvas. Release to draw again.</p>
+    </div>
+    <div id="buttons">
+      <div id="sizing-controls">
+        <input type="text" id="size-input" value="16" />
+        <button id="size">Set Size</button>
+      </div>
 
-<h1 class='cookie-regular'>Etch-A-Sketch</h1>
-<hr>
+      <div id="gridline-toggle">
+        <label for="gridlines">Gridlines</label>
+        <input type="checkbox" id="gridlines" />
+      </div>
 
-<div id="content">
-  <div id="container"></div>
-</div>
-<div id='instructions'>
-    <p>Press CTRL to lift the pen off the canvas. Release to draw again.</p>
-</div>
-<div id="buttons">
-  <div id="sizing-controls">
-    <input type="text" id="size-input" value="16">
-    <button id="size">Set Size</button>
-  </div>
+      <div class="colors">
+        <button class="button" id="blue">Blue</button>
+        <button class="button" id="red">Red</button>
+        <button class="button" id="green">Green</button>
+        <button class="button" id="black">Black</button>
+      </div>
+    </div>
 
-  <div id="gridline-toggle">
-      <label for="gridlines">Gridlines</label>
-      <input type="checkbox" id="gridlines">
-  </div>
-
-<div class="colors">
-    <button class="button" id="blue">Blue</button>
-    <button class="button" id="red">Red</button>
-    <button class="button" id="green">Green</button>
-    <button class="button" id="black">Black</button>
-</div>
-</div>
-
-<script src="./js/app.js"></script>
-</body>
-
+    <script src="./js/app.js"></script>
+  </body>
 </html>

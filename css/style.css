@@ -252,7 +252,6 @@ textarea {
   font-size: 40px;
 }
 
-
 #content {
   display: flex;
   justify-content: center;
@@ -280,8 +279,6 @@ textarea {
   border: solid 1px black;
 }
 
-
-
 .red {
   background-color: red;
 }
@@ -308,4 +305,14 @@ textarea {
 #instructions {
   display: flex;
   justify-content: center;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  height: 50px;
+  margin-top: 30px;
 }
